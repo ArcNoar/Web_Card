@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="icon" type="image/png" href="{% static 'iden/img/NoahIcon.png' %}" />
+    <link rel="stylesheet" href="{% static 'iden/css/Fonts/stylesheet.css' %}" />
+    <link rel="stylesheet" href="{% static 'iden/css/Base.css' %}" />
+    {% block css_add %} {% endblock %}
+</head>
+<body>
+
+    <div class="Stars"></div>
+
+    <div id="Nav-Panel">
+        <ul>
+            <li>
+                <a href="{% url 'About' %}">About</a>
+            </li>
+            <li>
+                <a href="{% url 'Admin' %}">Admin</a>
+            </li>
+        </ul>
+        <a href="{% url 'Main' %}" class="Arc_Label">A R C</a>
+        <a href="{% url 'Login' %}" class="Login-Button">Log in</a>
+        <div id="toggle">
+            <i class="indicator"></i>
+        </div>
+        <script type="text/javascript" src="{% static 'iden/js/Base.js' %}"></script>
+
+    </div>
+    <!-- Content -->
+    {% block content %} {% endblock %}
+    <!-- End Content -->
+</body>
+</html>
