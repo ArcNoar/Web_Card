@@ -1,0 +1,18 @@
+{% load static %}
+<div id="Nav-Panel">
+    <ul>
+        <li>
+            <a href="{% url 'About' %}">About</a>
+        </li>
+        <li>
+            <a href="{% url 'Admin' %}">Admin</a>
+        </li>
+    </ul>
+    <a href="{% url 'Main' %}" class="Arc_Label">A R C</a>
+    <a href="{% url 'Login' %}" class="Login-Button">Log in</a>
+    <div id="toggle">
+        <i class="indicator"></i>
+    </div>
+    <script type="text/javascript" src="{% static 'iden/js/Base.js' %}"></script>
+
+</div>
