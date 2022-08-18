@@ -1,5 +1,6 @@
 {% load static %}
 <div id="Nav-Panel">
+    <!--
     <ul>
         <li>
             <a href="{% url 'About' %}">About</a>
@@ -7,9 +8,14 @@
         <li>
             <a href="{% url 'Admin' %}">Admin</a>
         </li>
-    </ul>
+    </ul>   
+    -->
+    <span class="Greet_Label">Greetings, {{request.user}}</span>
+
     <a href="{% url 'Main' %}" class="Arc_Label">A R C</a>
-    <a href="{% url 'Login' %}" class="Login-Button">Log in</a>
+    
+    <a href="{% url 'LogOut' %}" class="LogOut-Button">Log out</a>
+    
     <div id="toggle">
         <i class="indicator"></i>
     </div>

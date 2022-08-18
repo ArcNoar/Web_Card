@@ -82,7 +82,21 @@ body {
     text-shadow: 0.7px 0.4px 1px, 0 0 0.5em rgb(151, 226, 255);
 }
 
-
+.Greet_Label {
+    /*White space запрещает перенос текста */
+    white-space: nowrap;
+    position: fixed;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Neue Machina Medium';
+    font-size: 32px;
+    margin-left: 3%;
+    margin-right: 77%;
+    margin-top: 0.5%;
+    color: aliceblue;
+    text-shadow: 0.4px 0.1px 0.6px, 0 0 0.1em rgb(151, 226, 255);
+    transition: 0.2s;
+}
 
 .Login-Button {
     display: flex;
@@ -113,6 +127,37 @@ body {
     color: aliceblue;
     text-shadow: 0.7px 0.4px 1px, 0 0 0.1em rgb(151, 226, 255);
 }
+
+.LogOut-Button {
+    display: flex;
+    position: fixed;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Neue Machina Medium';
+    font-size: 35px;
+    margin-left: 80%;
+    margin-right: 1%;
+    margin-top: 0.5%;
+    color: aliceblue;
+    text-shadow: 0.4px 0.1px 0.6px, 0 0 0.1em rgb(151, 226, 255);
+    transition: 0.2s;
+}
+
+
+.LogOut-Button:hover {
+    display: flex;
+    position: fixed;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Neue Machina Medium';
+    font-size: 35px;
+    margin-left: 80%;
+    margin-right: 1%;
+    margin-top: 0.5%;
+    color: aliceblue;
+    text-shadow: 0.7px 0.4px 1px, 0 0 0.1em rgb(151, 226, 255);
+}
+
 
 #toggle {
     position: fixed;
