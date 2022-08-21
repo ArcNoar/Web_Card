@@ -8,14 +8,22 @@
         <li>
             <a href="{% url 'Admin' %}">Admin</a>
         </li>
-    </ul>   
+    </ul>
     -->
-    <span class="Greet_Label">Greetings, {{request.user}}</span>
 
     <a href="{% url 'Main' %}" class="Arc_Label">A R C</a>
-    
+    {% if request.user.is_authenticated %}
+    <span class="Greet_Label">Greetings, {{request.user}}</span>
+
     <a href="{% url 'LogOut' %}" class="LogOut-Button">Log out</a>
-    
+
+    {% else %}
+
+    <a href="{% url 'Login' %}" class="Login-Button">Login</a>
+
+    {% endif %}
+
+
     <div id="toggle">
         <i class="indicator"></i>
     </div>

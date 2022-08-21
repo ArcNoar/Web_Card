@@ -9,6 +9,7 @@ from .forms import UserRegForm
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import Group
 
 from .decorators import *
 
@@ -17,7 +18,7 @@ def index(request):
 
 
 @login_required(login_url='Login')
-@permited_unit(allowed_roles=['Absolute','Zero'])
+#@permited_unit(allowed_roles=['Absolute','Zero'])
 def About(request):
     return render(request, 'iden/About.html', {'title' : 'Досье'})
 
@@ -33,9 +34,15 @@ def Register(request):
     if request.method == 'POST':
         form = UserRegForm(request.POST)
         if form.is_valid():
-            form.save()
-            user = form.cleaned_data.get('username')
-            messages.success(request, 'Account was created for ' + user)
+            user = form.save()
+            username = form.cleaned_data.get('username')
+
+            # Auto permit set
+            group = Group.objects.get(name='Zero')
+
+            user.groups.add(group)
+            
+            messages.success(request, 'Account was created for ' + username)
             return redirect('Login')
 
     context = {'form':form}
@@ -62,9 +69,10 @@ def Login(request):
 def Synopsis(request):
     return render(request, 'iden/Synopsis.html', {'title' : 'Synopsis'})
 
+
 def User_LogOut(request):
     logout(request)
-    return redirect('Login')
+    return redirect('Main')
 
 
 
