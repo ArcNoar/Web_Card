@@ -21,13 +21,13 @@ def index(request):
 
 @login_required(login_url='Login')
 #@permited_unit(allowed_roles=['Absolute','Zero'])
-def About(request):
-    return render(request, 'iden/About.html', {'title' : 'Досье'})
+def About(request): # Info Page
+    return render(request, 'iden/About.html', {'title' : 'Skill Summary'})
 
 @login_required(login_url='Login')
 @permited_unit(allowed_roles=['Absolute'])
 def Admin(request):
-    return render(request, 'iden/Admin.html', {'title' : 'Афелий'})
+    return render(request, 'iden/Admin.html', {'title' : 'Aphelios'})
 
 @un_auth
 def Register(request):
@@ -72,7 +72,7 @@ def Login(request):
     return render(request, 'iden/Login.html', context )
 
 @login_required(login_url='Login')
-def Synopsis(request):
+def Synopsis(request): # Profile Page
     return render(request, 'iden/Synopsis.html', {'title' : 'Synopsis'})
 
 
@@ -83,4 +83,4 @@ def User_LogOut(request):
 
 
 def pageNotFound(request,exception):
-    return HttpResponseNotFound('<h1> Че хател, зачем пришел. </h1>')
+    return HttpResponseNotFound('<h1> Maybe you on wrong path? Url path ofcourse </h1>')
