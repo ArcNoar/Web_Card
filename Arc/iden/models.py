@@ -7,8 +7,8 @@ from django.contrib.auth.models import User
 
 class Dossier(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-
     name = models.CharField(max_length=40, null=True)
+    appearance = models.ImageField(null=True,blank=True)
     
     
     reg_data = models.DateTimeField(auto_now_add = True, null=True)

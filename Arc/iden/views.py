@@ -7,6 +7,8 @@ from django.contrib import messages
 
 from .forms import UserRegForm
 
+from .models import Dossier
+
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
@@ -39,8 +41,11 @@ def Register(request):
 
             # Auto permit set
             group = Group.objects.get(name='Zero')
-
+            Dossier.objects.create(
+                user=user,
+                )
             user.groups.add(group)
+
             
             messages.success(request, 'Account was created for ' + username)
             return redirect('Login')
@@ -66,6 +71,7 @@ def Login(request):
     context = {}
     return render(request, 'iden/Login.html', context )
 
+@login_required(login_url='Login')
 def Synopsis(request):
     return render(request, 'iden/Synopsis.html', {'title' : 'Synopsis'})
 
