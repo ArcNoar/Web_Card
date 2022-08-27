@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+/Arc/Media
+
+/Arc/iden/static/iden/img/NoahIcon.png

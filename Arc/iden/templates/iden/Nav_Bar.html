@@ -5,20 +5,23 @@
 {% endblock %}
 
 <div id="Nav-Panel">
-    <!--
+
     <ul>
         <li>
             <a href="{% url 'About' %}">About</a>
         </li>
         <li>
+            {% if request.user.is_staff %}
             <a href="{% url 'Admin' %}">Admin</a>
+            {% endif %}
         </li>
     </ul>
-    -->
 
-    <a href="{% url 'Main' %}" class="Arc_Label">A R C</a>
+    {% block Arc_Label %}
+    {% endblock %}
+    <!--<a href="{% url 'Main' %}" class="Arc_Label">A R C</a>-->
     {% if request.user.is_authenticated %}
-    <span class="Greet_Label">Greetings, {{request.user}}</span>
+    <!--<span class="Greet_Label">Greetings, {{request.user}}</span>-->
 
     <a href="{% url 'LogOut' %}" class="LogOut-Button">Log out</a>
 
