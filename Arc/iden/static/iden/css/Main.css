@@ -2,12 +2,13 @@ body {
 /*    display: flex;*/
     background: #0e0d0f;
     background: linear-gradient(0deg, rgba(2, 3, 18,1) 0%, rgba(4,31,47,1) 49%, rgba(0,0,0,1) 79%);
-    min-height: 100vh;
+    min-height: 120vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
+/*Orb container*/
 .Container {
     position: relative;
     width: 100%;
@@ -54,12 +55,15 @@ body {
     }
 }
 
+
+/*Big Arc Label*/
+
 .Arc_Title {
     display: flex;
     position: absolute;
     text-decoration: none;
     color: rgb(225, 255, 247);
-    margin-top: 13%;
+    margin-top: 12%;
     margin-left: 43%;
     font-family: 'N_Mach Medium',Bahnschrift;
     font-size: 85px;
@@ -81,28 +85,74 @@ body {
     }
 
 
+/*path Choice div*/
 .Path_Choice {
     position: absolute;
     display: flex;
-    margin: 27% 4% 10% 6%;
+    margin: 27% 5% 10% 5%;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 5%;
     width: 170vh;
-    height: 40vh;
-/*    box-shadow: 0 0 10px  rgb(255, 255, 255), inset 0 0 5px rgba(0, 255, 227,0.2), inset 0 0 5px rgba(0, 255, 227,0.2);*/
+    height: 65vh;
+    flex-direction: column;
+    /*    box-shadow: 0 0 10px  rgb(255, 255, 255), inset 0 0 5px rgba(0, 255, 227,0.2), inset 0 0 5px rgba(0, 255, 227,0.2);*/
 }
 
+/*path big text*/
 .Path_Title {
     white-space: nowrap;
     display: flex;
-    position: absolute;
+    position: relative;
     text-decoration: none;
     color: rgb(225, 255, 247);
     margin-top: 2%;
-    margin-left: 35%;
+    margin-left: 34.3%;
     font-family: 'N_Mach Medium',Bahnschrift;
     font-size: 60px;
     transition: 1s;
     text-shadow: 0.7px 0.4px 1px, 0 0 0.2em rgb(151, 226, 255);
     z-index: 2;
+}
+
+.Choice_Container {
+    display: flex;
+    position: relative;
+    list-style-type: none;
+    flex-direction: row;
+}
+
+.Choice_Container li {
+    display: flex;
+    flex-direction: row;
+}
+
+    .Choice_Container li a {
+        background: #000000;
+        text-decoration: none;
+        text-align: center;
+        line-height: 240px;
+        font-family: 'N_Mach Medium',Bahnschrift;
+        color: rgb(225, 255, 247);
+        border-radius: 50%;
+        border: 2.1px solid;
+        border-color: rgb(0, 255, 227);
+        box-shadow: 0 0 10px rgb(0, 255, 227), inset 0 0 5px rgba(0, 255, 227,0.2), inset 0 0 5px rgba(0, 255, 227,0.2);
+        font-size: 45px;
+        min-height: 250px;
+        min-width: 250px;
+        margin-left: 15.8%;
+        margin-top: 3%;
+    }
+
+
+#Stack {
+
+}
+
+#Synopsis {
+    
+}
+
+#Secret {
+    
 }
