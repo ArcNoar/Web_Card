@@ -25,7 +25,7 @@
 
         #Nav-Panel ul li {
             position: relative;
-            margin-left: 16%;
+            margin-left: 47%;
         }
 
             #Nav-Panel ul li a {
@@ -86,13 +86,14 @@
 }
 
 .Login-Button {
+    white-space: nowrap;
     display: flex;
     position: fixed;
     text-decoration: none;
     text-align: center;
     font-family: 'Neue Machina Medium';
     font-size: 35px;
-    margin-left: 81%;
+    margin-left: 87%;
     margin-right: 1%;
     margin-top: 0.5%;
     color: aliceblue;
@@ -102,13 +103,14 @@
 
 
     .Login-Button:hover {
+        white-space: nowrap;
         display: flex;
         position: fixed;
         text-decoration: none;
         text-align: center;
         font-family: 'Neue Machina Medium';
         font-size: 35px;
-        margin-left: 81%;
+        margin-left: 87%;
         margin-right: 1%;
         margin-top: 0.5%;
         color: aliceblue;
@@ -116,13 +118,14 @@
     }
 
 .LogOut-Button {
+    white-space: nowrap;
     display: flex;
     position: fixed;
     text-decoration: none;
     text-align: center;
     font-family: 'Neue Machina Medium';
     font-size: 35px;
-    margin-left: 80%;
+    margin-left: 85%;
     margin-right: 1%;
     margin-top: 0.5%;
     color: aliceblue;
@@ -132,13 +135,14 @@
 
 
     .LogOut-Button:hover {
+        white-space: nowrap;
         display: flex;
         position: fixed;
         text-decoration: none;
         text-align: center;
         font-family: 'Neue Machina Medium';
         font-size: 35px;
-        margin-left: 80%;
+        margin-left: 85%;
         margin-right: 1%;
         margin-top: 0.5%;
         color: aliceblue;

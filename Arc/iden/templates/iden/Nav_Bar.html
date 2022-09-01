@@ -7,9 +7,9 @@
 <div id="Nav-Panel">
 
     <ul>
-        <li>
+        <!--<li>
             <a href="{% url 'About' %}">About</a>
-        </li>
+        </li>-->
         <li>
             {% if request.user.is_staff %}
             <a href="{% url 'Admin' %}">Admin</a>
@@ -32,9 +32,9 @@
     {% endif %}
 
 
-    <div id="toggle">
+    <!--<div id="toggle">
         <i class="indicator"></i>
-    </div>
-    <script type="text/javascript" src="{% static 'iden/js/Base.js' %}"></script>
+    </div>-->
+    <!--<script type="text/javascript" src="{% static 'iden/js/Base.js' %}"></script>-->
 
 </div>

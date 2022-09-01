@@ -92,7 +92,7 @@ body {
     margin: 27% 5% 10% 5%;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 5%;
-    width: 170vh;
+    width: 90%;
     height: 65vh;
     flex-direction: column;
     /*    box-shadow: 0 0 10px  rgb(255, 255, 255), inset 0 0 5px rgba(0, 255, 227,0.2), inset 0 0 5px rgba(0, 255, 227,0.2);*/
@@ -106,7 +106,7 @@ body {
     text-decoration: none;
     color: rgb(225, 255, 247);
     margin-top: 2%;
-    margin-left: 34.3%;
+    margin-left: 42.5%;
     font-family: 'N_Mach Medium',Bahnschrift;
     font-size: 60px;
     transition: 1s;
@@ -119,15 +119,19 @@ body {
     position: relative;
     list-style-type: none;
     flex-direction: row;
+
 }
 
-.Choice_Container li {
-    display: flex;
-    flex-direction: row;
-}
+    .Choice_Container li {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        
+    }
 
     .Choice_Container li a {
         background: #000000;
+        position: sticky;
         text-decoration: none;
         text-align: center;
         line-height: 240px;
@@ -140,8 +144,9 @@ body {
         font-size: 45px;
         min-height: 250px;
         min-width: 250px;
-        margin-left: 15.8%;
-        margin-top: 3%;
+/*        margin-left: 15.8%;*/
+/*        margin-top: 3%;*/
+        margin: 3% 10.7% 3% 10.7%;
     }
 
 
