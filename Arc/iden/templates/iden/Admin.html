@@ -1,0 +1,19 @@
+{% extends 'iden/Foundation.html' %}
+
+
+
+{% load static %}
+{% block css_add %}
+<link rel="stylesheet" href="{% static 'iden/css/Admin.css' %}" />
+{% endblock %}
+
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+
+{% block content %}
+{% include 'iden/Nav_Bar.html' %}
+<h2 class="Admin_Content"> Admin Page </h2>
+{% endblock %}

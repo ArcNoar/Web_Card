@@ -1,0 +1,18 @@
+
+
+body {
+    display: flex;
+    background: #0e0d0f;
+/*    background: linear-gradient(0deg, rgba(2, 3, 18,1) 0%, rgba(4,31,47,1) 49%, rgba(0,0,0,1) 79%);*/
+    margin: 0px;
+    margin-bottom: -20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+    width: 0em;
+    visibility: hidden;
+}
+

@@ -1,0 +1,40 @@
+{% load static %}
+
+{% block css_add %}
+<link rel="stylesheet" href="{% static 'iden/css/Nav_Bar.css' %}" />
+{% endblock %}
+
+<div id="Nav-Panel">
+
+    <ul>
+        <!--<li>
+            <a href="{% url 'About' %}">About</a>
+        </li>-->
+        <li>
+            {% if request.user.is_staff %}
+            <a href="{% url 'Admin' %}">Admin</a>
+            {% endif %}
+        </li>
+    </ul>
+
+    {% block Arc_Label %}
+    {% endblock %}
+    <!--<a href="{% url 'Main' %}" class="Arc_Label">A R C</a>-->
+    {% if request.user.is_authenticated %}
+    <!--<span class="Greet_Label">Greetings, {{request.user}}</span>-->
+
+    <a href="{% url 'LogOut' %}" class="LogOut-Button">Log out</a>
+
+    {% else %}
+
+    <a href="{% url 'Login' %}" class="Login-Button">Login</a>
+
+    {% endif %}
+
+
+    <!--<div id="toggle">
+        <i class="indicator"></i>
+    </div>-->
+    <!--<script type="text/javascript" src="{% static 'iden/js/Base.js' %}"></script>-->
+
+</div>

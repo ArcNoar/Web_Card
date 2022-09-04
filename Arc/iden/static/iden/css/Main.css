@@ -1,0 +1,175 @@
+body {
+
+    background: #0e0d0f;
+    background: linear-gradient(0deg, rgba(2, 3, 18,1) 0%, rgba(4,31,47,1) 49%, rgba(0,0,0,1) 79%);
+    min-height: 115vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    justify-content: center;
+    display: flex;
+/*    overflow: hidden;*/
+
+}
+
+/*Orb container*/
+.Container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+#Orbs {
+    position: relative;
+    display: flex;
+    height: 50%;
+}
+
+    #Orbs span {
+        position: relative;
+        height: 20px;
+        width: 30px;
+        margin: 0 5%;
+        animation: animate 8s linear infinite;
+        animation-duration: calc(170s / var(--i));
+        background: #000000;
+        border-radius: 50%;
+        border: 2.1px solid;
+        border-color: rgb(0, 255, 227);
+        box-shadow: 0 0 10px 0px rgb(0, 255, 227), inset 0 0 5px rgba(0, 255, 227,0.2), inset 0 0 5px rgba(0, 255, 227,0.2);
+    }
+#Orbs span:nth-child(even) {
+    background: #000000;
+    border-radius: 50%;
+    border: 2.1px solid;
+    border-color: rgb(0, 255, 227);
+    box-shadow: 0 0 10px #cc75ff, inset 0 0 5px rgb(0, 96, 255,0.2), inset 0 0 5px rgb(255, 108, 245,0.2);
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(50vh) scale(0);
+    }
+    100%
+    {
+        transform : translateY(-10vh) scale(1);
+        box-shadow: 0 0 25px 5px rgb(0, 255, 227), inset 0 0 5px rgba(0, 255, 227,0.2), inset 0 0 5px rgba(0, 255, 227,0.2);
+    }
+}
+
+
+/*Big Arc Label*/
+
+.Arc_Title {
+    display: flex;
+    position: absolute;
+    text-decoration: none;
+    color: rgb(225, 255, 247);
+    margin-top: 12%;
+    margin-left: 42.5%;
+    font-family: 'N_Mach Medium',Bahnschrift;
+    font-size: 85px;
+    transition: 1s;
+    text-shadow: 0.7px 0.4px 1px, 0 0 0.2em rgb(151, 226, 255);
+    z-index: 2;
+}
+
+    .Arc_Title:hover {
+        display: flex;
+        position: absolute;
+        text-decoration: none;
+        color: rgb(225, 255, 247);
+        margin-top: 12%;
+        margin-left: 42.5%;
+        font-family: 'N_Mach Medium',Bahnschrift;
+        font-size: 85px;
+        text-shadow: 0.7px 0.4px 1px, 0 0 0.5em rgb(151, 226, 255);
+    }
+
+
+.Path_Gallery {
+    position: absolute;
+    display: flex;
+    margin: 10% 5% 10% 5%;
+    border-radius: 5%;
+    width: 90%;
+    height: 65vh;
+    align-items: center;
+/*    overflow: auto;*/
+}
+
+.Path_Slider {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    transition: .7s;
+    flex-wrap: wrap;
+}
+
+.Choice_Slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 10% 10% 10%;
+}
+
+
+
+#Stack_Ico {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    transition: .5s;
+    
+}
+
+
+
+#Synapsis_Ico {
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    transition: .5s;
+}
+
+#Secret_Ico {
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    transition: .5s;
+    filter: blur(10px);
+}
+
+.Path_Button {
+    text-decoration: none;
+    color: rgb(225, 255, 247);
+    font-family: 'N_Mach Medium',Bahnschrift;
+    font-size: 45px;
+    text-align: center;
+    line-height: 305px;
+    position: relative;
+    width: 305px;
+    height: 305px;
+    border-radius: 50%;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, .8);
+    border: 2.1px solid;
+    border-color: rgb(0, 255, 227);
+    box-shadow: 0 0 10px rgb(0, 255, 227), inset 0 0 5px rgba(0, 255, 227,0.2), inset 0 0 5px rgba(0, 255, 227,0.2);
+}
+
+    .Path_Button:hover {
+        background-color: rgba(0, 0, 0, .2);
+        
+        width: 355px;
+        height: 355px;
+        line-height: 355px;
+        
+        
+    }
+
+
