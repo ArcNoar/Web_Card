@@ -34,16 +34,29 @@
     </div>
     <!--<script type="text/javascript" src="{% static 'iden/js/Base.js' %}"></script>-->
 </div>
-<div class="Path_Choice">
-    <span class="Path_Title">Explore</span>
-    <ul class="Choice_Container">
-        <li>
-            <a href="{% url 'About' %}" id="Stack">Stack</a>
-            <a href="#" id="Synopsis">Synopsis</a>
-            <a href="#" id="Secret">???</a>
-        </li>
-    </ul>
+<div class="Path_Gallery">
+
+    <div class="Path_Slider">
+        <div class="Choice_Slide" id="Stack_Slide">
+            <img src="{% static 'iden/img/Stack_Icon.png' %}" id="Stack_Ico" />
+            <a href="{% url 'About' %}" class="Path_Button" id="Stack_Button">Stack</a>
+        </div>
+        <div class="Choice_Slide" id="Synapsis_Slide">
+            <img src="{% static 'iden/img/Synapsis_Icon.png' %}" id="Synapsis_Ico" />
+
+            <a href="{% url 'Synopsis' %}" class="Path_Button" id="Synapsis_Button">Synopsis</a>
+        </div>
+        {% if request.user.is_staff %}
+        <div class="Choice_Slide" id="Secret_Slide">
+            <img src="{% static 'iden/img/Secret_Icon.png' %}" id="Secret_Ico" />
+
+            <a href="#Secret" class="Path_Button" id="Secret_Button">???</a>
+        </div>
+        {% endif%}
+    </div>
+
 </div>
+
 
 
 

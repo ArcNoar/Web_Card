@@ -1,11 +1,15 @@
 body {
-/*    display: flex;*/
+
     background: #0e0d0f;
     background: linear-gradient(0deg, rgba(2, 3, 18,1) 0%, rgba(4,31,47,1) 49%, rgba(0,0,0,1) 79%);
-    min-height: 120vh;
+    min-height: 115vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    justify-content: center;
+    display: flex;
+/*    overflow: hidden;*/
+
 }
 
 /*Orb container*/
@@ -64,7 +68,7 @@ body {
     text-decoration: none;
     color: rgb(225, 255, 247);
     margin-top: 12%;
-    margin-left: 43%;
+    margin-left: 42.5%;
     font-family: 'N_Mach Medium',Bahnschrift;
     font-size: 85px;
     transition: 1s;
@@ -77,87 +81,95 @@ body {
         position: absolute;
         text-decoration: none;
         color: rgb(225, 255, 247);
-        margin-top: 13%;
-        margin-left: 43%;
+        margin-top: 12%;
+        margin-left: 42.5%;
         font-family: 'N_Mach Medium',Bahnschrift;
         font-size: 85px;
         text-shadow: 0.7px 0.4px 1px, 0 0 0.5em rgb(151, 226, 255);
     }
 
 
-/*path Choice div*/
-.Path_Choice {
+.Path_Gallery {
     position: absolute;
     display: flex;
-    margin: 27% 5% 10% 5%;
-    background: rgba(0, 0, 0, 0.6);
+    margin: 10% 5% 10% 5%;
     border-radius: 5%;
     width: 90%;
     height: 65vh;
-    flex-direction: column;
-    /*    box-shadow: 0 0 10px  rgb(255, 255, 255), inset 0 0 5px rgba(0, 255, 227,0.2), inset 0 0 5px rgba(0, 255, 227,0.2);*/
+    align-items: center;
+/*    overflow: auto;*/
 }
 
-/*path big text*/
-.Path_Title {
-    white-space: nowrap;
+.Path_Slider {
+    width: 100%;
+    height: 50%;
+    position: absolute;
     display: flex;
-    position: relative;
+    justify-content: center;
+    transition: .7s;
+    flex-wrap: wrap;
+}
+
+.Choice_Slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 10% 10% 10%;
+}
+
+
+
+#Stack_Ico {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    transition: .5s;
+    
+}
+
+
+
+#Synapsis_Ico {
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    transition: .5s;
+}
+
+#Secret_Ico {
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    transition: .5s;
+    filter: blur(10px);
+}
+
+.Path_Button {
     text-decoration: none;
     color: rgb(225, 255, 247);
-    margin-top: 2%;
-    margin-left: 42.5%;
     font-family: 'N_Mach Medium',Bahnschrift;
-    font-size: 60px;
-    transition: 1s;
-    text-shadow: 0.7px 0.4px 1px, 0 0 0.2em rgb(151, 226, 255);
-    z-index: 2;
-}
-
-.Choice_Container {
-    display: flex;
+    font-size: 45px;
+    text-align: center;
+    line-height: 305px;
     position: relative;
-    list-style-type: none;
-    flex-direction: row;
-
+    width: 305px;
+    height: 305px;
+    border-radius: 50%;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, .8);
+    border: 2.1px solid;
+    border-color: rgb(0, 255, 227);
+    box-shadow: 0 0 10px rgb(0, 255, 227), inset 0 0 5px rgba(0, 255, 227,0.2), inset 0 0 5px rgba(0, 255, 227,0.2);
 }
 
-    .Choice_Container li {
-        display: flex;
-        position: relative;
-        flex-direction: row;
+    .Path_Button:hover {
+        background-color: rgba(0, 0, 0, .2);
+        
+        width: 355px;
+        height: 355px;
+        line-height: 355px;
+        
         
     }
 
-    .Choice_Container li a {
-        background: #000000;
-        position: sticky;
-        text-decoration: none;
-        text-align: center;
-        line-height: 240px;
-        font-family: 'N_Mach Medium',Bahnschrift;
-        color: rgb(225, 255, 247);
-        border-radius: 50%;
-        border: 2.1px solid;
-        border-color: rgb(0, 255, 227);
-        box-shadow: 0 0 10px rgb(0, 255, 227), inset 0 0 5px rgba(0, 255, 227,0.2), inset 0 0 5px rgba(0, 255, 227,0.2);
-        font-size: 45px;
-        min-height: 250px;
-        min-width: 250px;
-/*        margin-left: 15.8%;*/
-/*        margin-top: 3%;*/
-        margin: 3% 10.7% 3% 10.7%;
-    }
 
-
-#Stack {
-
-}
-
-#Synopsis {
-    
-}
-
-#Secret {
-    
-}

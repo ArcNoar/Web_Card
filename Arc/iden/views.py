@@ -83,4 +83,4 @@ def User_LogOut(request):
 
 
 def pageNotFound(request,exception):
-    return HttpResponseNotFound('<h1> Maybe you on wrong path? Url path ofcourse </h1>')
+    return HttpResponseNotFound('<h1> Maybe you on wrong path? </h1>')
