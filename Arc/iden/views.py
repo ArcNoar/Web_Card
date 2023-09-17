@@ -19,7 +19,7 @@ def index(request):
     return render(request, 'iden/Main_Page.html', {'title' : 'Hall'})
 
 
-@login_required(login_url='Login')
+#@login_required(login_url='Login')
 #@permited_unit(allowed_roles=['Absolute','Zero'])
 def About(request): # Info Page
     return render(request, 'iden/About.html', {'title' : 'Skill Summary'})
@@ -79,6 +79,13 @@ def Synopsis(request): # Profile Page
 def User_LogOut(request):
     logout(request)
     return redirect('Main')
+
+
+def NeuroMap(request):
+
+    context = {'title': 'Neuro Map'}
+    return render(request, 'iden/Neuro_Map.html', context)
+
 
 
 

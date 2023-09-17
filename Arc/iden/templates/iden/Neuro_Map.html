@@ -1,0 +1,27 @@
+{% extends 'iden/Foundation.html' %}
+
+{% load static %}
+{% block css_add %}
+<link rel="stylesheet" href="{% static 'iden/css/Neuro_Map.css' %}" />
+{% endblock %}
+
+
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+{% include 'iden/Nav_Bar.html' %}
+{% block Arc_Label %}
+<a href="{% url 'Main' %}" class="Arc_Label">A R C</a>
+
+<div class="Navigator" id="N_Content">
+    
+    <script type="text/javascript" src="{% static 'iden/js/Neuro_Map.js' %}"></script>
+</div>
+
+
+
+{% endblock %}
+{% endblock %}

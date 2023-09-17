@@ -1,0 +1,11 @@
+
+
+.Page_Status {
+    display: flex;
+    position: center;
+    font-family: 'N_Mach Medium',Bahnschrift;
+    font-size: 70px;
+    white-space: nowrap;
+    color: rgb(0, 227, 255);
+    margin: 20% 25% 0% 26%;
+}

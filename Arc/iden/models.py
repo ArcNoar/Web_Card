@@ -23,7 +23,6 @@ class Dossier(models.Model):
         ordering = ['reg_data']
 
 
-
 # HIGH_PERM
 
 
